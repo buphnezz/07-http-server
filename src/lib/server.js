@@ -1,7 +1,7 @@
 'use strict';
 
 const http = require('http');
-// add const cowsay...I could not get it to install correctly, so I removed it for now...Windows for the win!
+const cowsay = require('cowsay');
 const bodyParser = require('./body-parser');
 
 const server = module.exports = {};
@@ -22,7 +22,7 @@ const app = http.createServer((req, res) => {
         res.end();
         return undefined;
       }
-
+      
       if (parsedRequest.method === 'GET' && parsedRequest.url.pathname === '/cowsayPage') {
         res.writeHead(200, { 'Content-Type': 'text/html' });
         const cowsayText = cowsay.say({ text: parsedRequest.url.query.text });
