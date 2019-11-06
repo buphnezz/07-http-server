@@ -28,7 +28,7 @@
       {
         "allowForLoopAfterthoughts": true
       }
-    ],
+    ], 
     "no-trailing-spaces": "off",
     "linebreak-style": "off",
     "strict": "off"
